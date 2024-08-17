@@ -3,7 +3,7 @@ import "../App.css";
 
 import { Pagination } from "@mui/material";
 
-// import axios from "axios";
+import axios from "axios";
 
 
 
@@ -109,22 +109,32 @@ const deleteLoading = useAppSelector( (state) => state.deleteStatus.status)
 
       
       try {
-        const response = await fetch(fetchUrl, {
-          method: "GET",
+        // const response = await fetch(fetchUrl, {
+        //   method: "GET",
+        //   headers: {
+        //     Authorization: `Token ${token}`,
+        //     // 'Access-Control-Allow-Origin': '*',
+        //   },
+        // });
+
+        const response = await axios({
+          baseURL: "https://harf.roshan-ai.ir",
+          url: fetchUrl, // the endpoint relative to the baseURL
+          method: "GET", // or method: method if it's dynamic
           headers: {
             Authorization: `Token ${token}`,
-            // 'Access-Control-Allow-Origin': '*',
+            // 'Access-Control-Allow-Origin': '*', // Typically not needed with axios
           },
         });
 
       console.log("Response status:", response.status);
       console.log("Response headers:", response.headers);
 
-      if (!response.ok) {
+      if (response.status !== 200) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = await response.json();
+      const data = response.data;
       // setFetchFile(data.results);
 
       
