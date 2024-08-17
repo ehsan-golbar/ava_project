@@ -69,8 +69,8 @@ const FileItem: React.FC<MyComponentProps> = (props) => {
   // console.log ("base url",baseURL )
 // const endpoint = `/requests/${props.fileId}/`;
 // const url = `${baseURL}${endpoint}`;
-  const url = `/api/requests/${props.fileId}/`;
-  const token = "a85d08400c622b50b18b61e239b9903645297196";
+  // const url = `/api/requests/${props.fileId}/`;
+  // const token = "a85d08400c622b50b18b61e239b9903645297196";
 
   const dispatch = useAppDispatch();
 // const deleteLoading = useAppSelector( (state) => state.deleteStatus.status)
@@ -80,7 +80,7 @@ const FileItem: React.FC<MyComponentProps> = (props) => {
     return new Promise((res) => setTimeout(res, delay));
   }
 
-  const deleteFile =  () => {
+  const deleteFile =   async () => {
     // props.onDataUpdate()
     // props.parrentFetch( true)
     // setLoading(true);
@@ -120,10 +120,12 @@ const FileItem: React.FC<MyComponentProps> = (props) => {
     // }
 
     
-    dispatch(setDeleteStatus(true))
+   setLoading(true)
+    await timeout(1000); //for 1 sec delay
     dispatch (removeFile(props.fileId))
-
-    dispatch(setDeleteStatus(false))
+    await timeout(1000); //for 1 sec delay
+    
+    setLoading(false)
   };
 
   const toPersianNumber = (num: number | string) => {
