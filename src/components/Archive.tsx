@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 import { useAppSelector } from "./store/store";
 
 // import { useFileFetch } from "./FileFetchContext";
-import Progress from "./Progress";
+// import Progress from "./Progress";
 // import React from "react";
 // import { setDeleteStatus } from "./store/slices/DeleteStatus";
 

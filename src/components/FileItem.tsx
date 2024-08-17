@@ -20,7 +20,7 @@ import Progress from "./Progress";
 import { useAppDispatch} from "./store/store";
 import { Segment } from "@mui/icons-material";
 import { setFileSegments } from "./store/slices/fetchFileSegmentsSlice";
-import { setDeleteStatus } from "./store/slices/DeleteStatus";
+// import { setDeleteStatus } from "./store/slices/DeleteStatus";
 import { removeFile } from "./store/slices/FetchFiles";
 
 type FileType = "mic" | "upload" | "chain";
