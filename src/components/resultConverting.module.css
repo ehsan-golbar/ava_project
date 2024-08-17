@@ -1,0 +1,331 @@
+.resultCard {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+.resultHead {
+  display: flex;
+
+  align-items: center;
+  /* padding: 1rem; */
+
+  gap: 1rem;
+
+  border-bottom: 0.25px solid rgba(0, 0, 0, 0.25);
+
+  /* padding-bottom: 0.5rem; */
+
+  margin: 1rem;
+}
+
+.simpletext {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  /* متن زمان‌بندی شده */
+
+  width: 20%;
+}
+
+.simpletextSelected {
+  /* Line 19 */
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+
+  /* متن زمان‌بندی شده */
+
+  width: 20%;
+
+  border-bottom: #000000 1px solid;
+  height: 100%;
+}
+
+.resultHeadItem {
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+
+  color: #000000;
+}
+
+.resultHeadItemSelected {
+  /* متن زمان‌بندی شده */
+
+  /* متن ساده */
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+
+  color: #000000;
+}
+
+.timedText {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 30%;
+}
+
+.timedTextSelected {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  width: 30%;
+
+  border-bottom: #000000 1px solid;
+  height: 100%;
+}
+
+.resultActions {
+  display: flex;
+
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+
+  width: 50%;
+}
+
+.actionOne {
+  width: fit-content;
+}
+
+.actionTwo {
+  width: fit-content;
+}
+
+.actionThree {
+  width: fit-content;
+}
+
+.resultBody {
+  padding: 0rem 3rem;
+
+  overflow-y: scroll;
+
+  height: 70%;
+
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.resultFoot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startAgain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #118ad3;
+  padding: 0 1rem;
+  border-radius: 30px;
+
+  margin-bottom: 0.5rem;
+}
+
+.refreshItem {
+  /* شروع دوباره */
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
+
+  color: #ffffff;
+}
+
+/* Style the entire scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height of the scrollbar */
+}
+
+/* Style the scrollbar track (the background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Style the draggable part of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: #dadada; /* Darker gray color */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Change the color of the scrollbar thumb when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background: #c7c7c7; /* Even darker gray */
+}
+
+/* Hide the scrollbar arrows */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.bodyText {
+  /* .[عشقی اگر] .[می کنی فرد] .تو آدم میره .خوب تو خوب تو دارم .آرزو که [دیگه رو] .خوب [تو] .[قبل] تو میشه [می گفتم] .با [خود] .خوب تو [رو خوب تو] .آرزو [مینه بمونه] که [ام] .خوب [دوم] .[عشقی اگر] .[می کنی فرد] .تو آدم میره .خوب تو خوب تو دارم .آرزو که [دیگه رو] .خوب [تو] .[قبل] تو میشه [می گفتم] .با [خود] .خوب تو [رو خوب تو] .آرزو [مینه بمونه] که [ام] .خوب [دوم] .[عشقی اگر] .[می کنی فرد] .تو آدم میره .خوب تو خوب تو دارم .آرزو که [دیگه رو] .خوب [تو] .[قبل] تو میشه [می گفتم] .با [خود] .خوب تو [رو خوب تو] .آرزو [مینه بمونه] که [ام] .خوب [دوم] */
+
+  /* [با][---][---] [با] و[---][---] [با][---][---][---][---] کجایی تو [خوش] می دیدی من خسته شدم [ما را] [به] این [زودی] چه جوری شد [عشق شدی] به این است[---] [آخرش] سی با فکر [و] چقدر [نزار می خوام] که [چشم تو] [و با رفت][---][---][---][---][---][---][---][---] سخت [آرام] ولی ازت می خوام[---] بر نگردی هر کسی که به [تو] باشه[---] کاشکی تو منو [بردی] [که چشمک][---] با[---][---][---][---][---] [ابو][---] [با] و و و و و [او] */
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: right;
+
+  color: #000000;
+}
+
+.bodyTextEnglish {
+  /* [---][---] Lili, take another walk out [of] your fake world [---][---] [Please] put all the drugs out of your hand [---][---] [---][---] You'll see that you can breathe without no back [up] [---][---] So much [stuff] you got to [understand] For every step [---][---] in any walkAny town of any thought[I'll] be your guideFor every street of [any] [sceneAny] place you've never [beenI'll] be your guide [---][---][---][---] */
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+
+  color: #626262;
+
+  padding: 0 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  direction: ltr;
+}
+
+.timedTextItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height */
+  text-align: right;
+}
+
+.timedTextItemBackground {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height */
+  text-align: right;
+
+  background: #f2f2f2;
+  box-shadow: 1px 1px 50px rgba(99, 99, 99, 0.05);
+  border-radius: 25px;
+}
+
+.timedTextItemSelectedBackground {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height */
+  text-align: right;
+  color: #118ad3;
+
+  background: #f2f2f2;
+  box-shadow: 1px 1px 50px rgba(99, 99, 99, 0.05);
+  border-radius: 25px;
+}
+
+.timedTextItemSelected {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height */
+  text-align: right;
+  color: #118ad3;
+}
+
+.timedTextItemOne {
+  width: 10%;
+
+  margin-right: 1rem;
+
+  /* [با] */
+  font-family: "IRANSansXFaNum";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1px;
+  /* identical to box height */
+  text-align: center;
+}
+
+.timedTextItemTwo {
+  width: 10%;
+
+  font-family: "IRANSansXFaNum";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1px;
+  /* identical to box height */
+  text-align: center;
+}
+
+.timedTextItemThree {
+  width: 80%;
+
+  margin-right: 2rem;
+}
+
+.resultFoot {
+  display: flex;
+}
