@@ -9,14 +9,15 @@ import uploadIcon from "../assets/upload Icon.png";
 
 import SpeechCardFoot from "./SpeechCardFoot";
 import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
+import {useState } from "react";
 
 // import { FileData, useFileFetch } from './FileFetchContext';
 
 import rstyles from "./resultConverting.module.css";
 // import { Flag } from "@mui/icons-material";
-import Progress from "./Progress";
-import { useAppDispatch } from "./store/store";
+// import Progress from "./Progress";
+import { useAppDispatch, useAppSelector } from "./store/store";
+import { findFileByUrl  } from "./store/slices/FetchFiles";
 import { setFileSegments } from "./store/slices/fetchFileSegmentsSlice";
 
 interface Segment {
@@ -25,74 +26,101 @@ interface Segment {
   text: string;
 }
 
-interface Stats {
-  words: number;
-  known_words: number;
-}
+// interface Stats {
+//   words: number;
+//   known_words: number;
+// }
 
-interface FileData {
+// interface FileData {
+//   duration: string;
+//   // id: number;
+//   // processed: string;
+
+//   media_url: string;
+//   segments: Segment[];
+//   // length: number;
+//   stats: Stats;
+// }
+
+export interface FileData {
   duration: string;
-  // id: number;
-  // processed: string;
-
-  media_url: string;
+  id: number;
+  processed: string;
   segments: Segment[];
   // length: number;
-  stats: Stats;
+  url: string;
 }
 
 export default function LinkFile() {
   const [fileUrl, setFileUrl] = useState<string>("");
 
   // const { fetchFile } = useFileFetch();
+  const dataState = useAppSelector((state) => state.removeFile);
 
   const [showResult, setShowResult] = useState<boolean>(false);
 
-  const [selectedFile, setSelectedFile] = useState<FileData>();
+  const [selectedFile, setSelectedFile] = useState<FileData | undefined>(undefined);
 
-  const [loading, setLoading] = useState<boolean>(false);
-  const url = "/api/transcribe_files/";
-  const token = "a85d08400c622b50b18b61e239b9903645297196";
+  // const [loading, setLoading] = useState<boolean>(false);
+  // const url = "/api/transcribe_files/";
+  // const token = "a85d08400c622b50b18b61e239b9903645297196";
   const dispatch = useAppDispatch();
+  // const file = useAppSelector((state) => findFileByUrl(state., fileIdToFind));
 
-  const fetchFile = async () => {
-    setLoading(true);
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Token ${token}`,
-      },
 
-      body: JSON.stringify({
-        media_urls: [`${fileUrl}`],
-      }),
-    });
 
-    console.log("post status : ", response.status);
+    // useEffect( () =>{
+    //   if (selectedFile !== undefined)
+    //   setShowResult(true);
+    // }, [selectedFile])
+  const fetchFile =  () => {
+    // setLoading(true);
+    // const file  = useAppSelector((state) => findFileByUrl(state.removeFile, fileUrl));
+    const file = findFileByUrl(dataState, fileUrl);
+    setSelectedFile( file)
+    if (file !== undefined)
+    dispatch(setFileSegments(file.segments))
+    console.log (file?.segments)
 
-    if (!response.ok) {
-      alert(`HTTP error! status: ${response.status}`);
-      setLoading(false);
-      setShowResult(false);
-      throw new Error(`HTTP error! status: ${response.status}`);
-    } else {
-      const data = await response.json();
-      console.log("data : ", data[0].message);
-      if (data[0].message === "Download error!") {
-        alert(`URL does not exist on server`);
-        setLoading(false);
-        setShowResult(false);
-      } else {
-        console.log("item Id : ", data[0]);
+       setShowResult(true);
+    // const response = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: `Token ${token}`,
+    //   },
 
-        setSelectedFile(data[0]);
-        dispatch(setFileSegments(data[0].segments));
-        setLoading(false);
-        setShowResult(true);
-      }
+    //   body: JSON.stringify({
+    //     media_urls: [`${fileUrl}`],
+    //   }),
+    // });
+
+    // console.log("post status : ", response.status);
+
+    // if (!response.ok) {
+    //   alert(`HTTP error! status: ${response.status}`);
+    //   setLoading(false);
+    //   setShowResult(false);
+    //   throw new Error(`HTTP error! status: ${response.status}`);
+    // } else {
+    //   const data = await response.json();
+    //   console.log("data : ", data[0].message);
+    //   if (data[0].message === "Download error!") {
+    //     alert(`URL does not exist on server`);
+    //     setLoading(false);
+    //     setShowResult(false);
+    //   } else {
+        // console.log("item Id : ", data[0]);
+
+        // setSelectedFile(data[0]);
+        // dispatch(setFileSegments(data[0].segments));
+        // setLoading(false);
+        // setShowResult(true);
+      // }
+
+
     }
-  };
+
 
   const handleChainButoonClick = () => {
     fetchFile();
@@ -139,7 +167,7 @@ export default function LinkFile() {
         </div>
 
         <div className={styles.cardBodyLink}>
-          {!loading ? (
+          { (
             !showResult ? (
               <div className={styles.bodyDescriptionUpload}>
                 <div className={styles.linkInputSection}>
@@ -175,9 +203,7 @@ export default function LinkFile() {
                 ></Outlet>
               </div>
             )
-          ) : (
-            <Progress progressColor="red"></Progress>
-          )}
+          ) }
         </div>
 
         <SpeechCardFoot></SpeechCardFoot>

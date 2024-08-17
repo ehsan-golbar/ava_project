@@ -3234,5 +3234,9 @@ const dataSlice = createSlice({
   },
 });
 
+export const findFileByUrl = (state: DataState, fileUrl: string): FileData | undefined => {
+    return state.files.find((file) => file.url === fileUrl);  
+  };
+
 export const {  removeFile } = dataSlice.actions;
 export default dataSlice.reducer;
