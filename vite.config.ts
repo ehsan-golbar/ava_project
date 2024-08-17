@@ -11,7 +11,7 @@ export default defineConfig({
         target: 'https://harf.roshan-ai.ir',  // Replace with your actual API base URL
         changeOrigin: true,  // Needed for virtual hosted sites
         secure: false,       // Set to true if you're using https
-        // rewrite: (path) => path.replace(/^\/api/, ''),  // Remove /api prefix if needed
+        // rewrite: (path) => path.replace('/api' , ''),  // Remove /api prefix if needed
       },
     },
   },

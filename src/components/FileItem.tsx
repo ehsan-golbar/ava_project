@@ -21,6 +21,7 @@ import { useAppDispatch} from "./store/store";
 import { Segment } from "@mui/icons-material";
 import { setFileSegments } from "./store/slices/fetchFileSegmentsSlice";
 import { setDeleteStatus } from "./store/slices/DeleteStatus";
+import { removeFile } from "./store/slices/FetchFiles";
 
 type FileType = "mic" | "upload" | "chain";
 
@@ -79,44 +80,50 @@ const FileItem: React.FC<MyComponentProps> = (props) => {
     return new Promise((res) => setTimeout(res, delay));
   }
 
-  const deleteFile = async () => {
+  const deleteFile =  () => {
     // props.onDataUpdate()
     // props.parrentFetch( true)
-    setLoading(true);
+    // setLoading(true);
+    // dispatch(setDeleteStatus(true))
+    // try {
+    //   const response = await fetch(url, {
+    //     method: "DELETE",
+    //     headers: {
+    //       Authorization: `Token ${token}`,
+    //       // 'Access-Control-Allow-Origin': '*',
+    //     },
+    //   });
+
+    //   console.log("url", url);
+
+    //   console.log("Response status:", response.status);
+    //   console.log("Response headers:", response.headers);
+    //   if (!response.ok) {
+    //     // props.parrentFetch(true);
+    //    dispatch(setDeleteStatus(false))
+
+    //     setLoading(false);
+    //     alert(`HTTP error! status: ${response.status}`);
+
+    //     throw new Error(`HTTP error! status: ${response.status}`);
+    //   }
+
+    //   console.log(`file ${props.fileId} removed`);
+    //   await timeout(1000); //for 1 sec delay
+
+    //   // props.parrentFetch(true);
+    //   setLoading(false);
+    // dispatch(setDeleteStatus(false))
+
+    // } catch (error) {
+    //   console.log(error);
+    // }
+
+    
     dispatch(setDeleteStatus(true))
-    try {
-      const response = await fetch(url, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Token ${token}`,
-          // 'Access-Control-Allow-Origin': '*',
-        },
-      });
+    dispatch (removeFile(props.fileId))
 
-      console.log("url", url);
-
-      console.log("Response status:", response.status);
-      console.log("Response headers:", response.headers);
-      if (!response.ok) {
-        // props.parrentFetch(true);
-       dispatch(setDeleteStatus(false))
-
-        setLoading(false);
-        alert(`HTTP error! status: ${response.status}`);
-
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      console.log(`file ${props.fileId} removed`);
-      await timeout(1000); //for 1 sec delay
-
-      // props.parrentFetch(true);
-      setLoading(false);
     dispatch(setDeleteStatus(false))
-
-    } catch (error) {
-      console.log(error);
-    }
   };
 
   const toPersianNumber = (num: number | string) => {

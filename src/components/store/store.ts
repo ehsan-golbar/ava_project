@@ -6,6 +6,8 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
 import deleteStatusReducer from './slices/DeleteStatus'
 
+import removeFileReducer from './slices/FetchFiles'
+
 
 
 const store = configureStore({
@@ -13,6 +15,7 @@ const store = configureStore({
     data: languageReducer,
     fileFetchSegments: fileFetchSegmentsReducer,
     deleteStatus : deleteStatusReducer,
+    removeFile : removeFileReducer
   },
 });
 
