@@ -77,7 +77,7 @@ interface FileData {
 export default function Archive() {
   // const dispatch = useAppDispatch()
 
-  const deleteLoading = useAppSelector((state) => state.deleteStatus.status);
+  // const deleteLoading = useAppSelector((state) => state.deleteStatus.status);
   const updateFiles = useAppSelector((state) => state.removeFile.files);
 
   const [fetchFile, setFetchFile] = useState<FileData[]>([]);
@@ -85,7 +85,7 @@ export default function Archive() {
   // const [deleteFromChild, setDeleteFromChild] = useState<boolean>(false);
 
   // const [deleteLoading, setDeleteLoading] = useState<boolean>(false);
-  const [firstLoading, setFirstLoading] = useState<boolean>(false);
+  // const [firstLoading, setFirstLoading] = useState<boolean>(false);
 
   // const [fetchToggle, setFetchToggle] = useState(false);
   // const [firstLoading ]
@@ -229,7 +229,7 @@ export default function Archive() {
           <p> آرشیو من</p>
         </div>
 
-        {!firstLoading && !deleteLoading ? (
+        { (
           <div className={styles.archiveFiles}>
             <div className={styles.fileItems}>
               <div style={{ width: "50%" }}>
@@ -282,9 +282,7 @@ export default function Archive() {
               ))}
             </ul>
           </div>
-        ) : (
-          <Progress progressColor="blue"></Progress>
-        )}
+        ) }
       </div>
       <div className={styles.pagination}>
         <ThemeProvider theme={theme}>
