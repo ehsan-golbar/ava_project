@@ -8,12 +8,13 @@ interface MyComponentProps {
   textBlue: boolean;
 }
 const TimedTextItem: React.FC<MyComponentProps> = (props) => {
+  const toPersianNumber = (num: number | string) => {
+    const persianDigits = "۰۱۲۳۴۵۶۷۸۹";
+    return num
+      .toString()
+      .replace(/\d/g, (digit) => persianDigits[parseInt(digit)]);
+  };
 
-    const toPersianNumber = (num: number | string) => {
-        const persianDigits = '۰۱۲۳۴۵۶۷۸۹';
-        return num.toString().replace(/\d/g, (digit) => persianDigits[parseInt(digit)]);
-      };
-      
   return (
     <>
       <div
@@ -21,7 +22,7 @@ const TimedTextItem: React.FC<MyComponentProps> = (props) => {
           props.textBlue
             ? props.backGround
               ? styles.timedTextItemSelectedBackground
-              : styles.timedTextItemSelected 
+              : styles.timedTextItemSelected
             : props.backGround
             ? styles.timedTextItemBackground
             : styles.timedTextItem

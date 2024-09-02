@@ -17,7 +17,7 @@ import AudioPlayer from "./AudioPlayer";
 
 import Tooltip from "@mui/material/Tooltip";
 import { Link } from "react-router-dom";
-// import { useSelector } from "react-redux";
+
 import { useAppSelector } from "./store/store";
 
 type Source = "upload" | "archive" | "link";
@@ -25,41 +25,26 @@ interface MyComponentProps {
   source: Source;
 }
 
-// interface Segment {
-//   start: string;
-//   end: string;
-//   text: string;
-// }
-
-// interface FileContext {
-//   fileSegments?: Segment[];
-// }
-
 export default function TimedText(props: MyComponentProps) {
   const [downloadIconImg, setDownloadIconImg] = useState(downloadIcon);
   const [copyIconImg, setCopyIconImg] = useState(copyIcon);
 
-  // const { fileSegments } = useOutletContext<FileContext>();
-
-  const fileSegments = useAppSelector((state) => state.fileFetchSegments.fileSegments);
+  const fileSegments = useAppSelector(
+    (state) => state.fileFetchSegments.fileSegments
+  );
 
   const formatDuration = (duration: string): string => {
-    // Split the duration into parts based on colons
     const parts = duration.split(":");
 
-    // Extract hours, minutes, and seconds
-    let hours = parts.length === 3 ? parts[0] : ""; // Hours are present if there are 3 parts
-    let minutes = parts.length === 3 ? parts[1] : parts[0]; // If 3 parts, minutes are in the second slot
-    let seconds = parts.length === 3 ? parts[2] : parts[1]; // If 3 parts, seconds are in the third slot
+    let hours = parts.length === 3 ? parts[0] : "";
+    let minutes = parts.length === 3 ? parts[1] : parts[0];
+    let seconds = parts.length === 3 ? parts[2] : parts[1];
 
-    // Remove milliseconds from seconds
     seconds = seconds.split(".")[0];
 
-    // Ensure minutes and seconds are two digits long
     if (minutes.length === 1) minutes = "0" + minutes;
     if (seconds.length === 1) seconds = "0" + seconds;
 
-    // Combine hours (if present), minutes, and seconds
     if (hours !== "0") {
       return `${hours}:${minutes}:${seconds}`;
     } else {
@@ -130,7 +115,6 @@ export default function TimedText(props: MyComponentProps) {
               />
             </button>
           </div>
-          {/* <div className={styles.actionOne}> */}
 
           <div className={styles.startAgain}>
             <button className="buttonStyle">

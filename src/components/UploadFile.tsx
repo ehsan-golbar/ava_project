@@ -17,21 +17,17 @@ interface MyComponentProps {
 }
 
 export default function UploadFile(props: MyComponentProps) {
-  // const resultLanguage = useSelector((state: RootState) => state.data.resultLanguage);
   const resultLanguage = useAppSelector((state) => state.data.resultLanguage);
-  // const dispatch: AppDispatch = useDispatch();
 
   if (props.state === "upload") {
     return (
       <>
         <div className={styles.speechCard}>
           <div className={styles.cardHead}>
-            {/* <div className={styles.cardHeadItemOne}> */}
             <div className={styles.cardHeadItems}>
               <div className={styles.cardHeadItem}>
                 <button className="buttonStyle">
                   <Link to="/convert-speech/record" className="linkStyle">
-                    {/* <img src={micIconWhite} alt="micIcon" /> */}
                     <img src={micIcon} alt="micIcon" />
                     <p>ضبط صدا</p>
                   </Link>
@@ -73,17 +69,15 @@ export default function UploadFile(props: MyComponentProps) {
                   پیاده شده آن، در اینجا ظاهر می شود
                 </p>
               ) : (
-
                 <div>
-                <p className={rstyles.bodyTextEnglish}>
-                  To upload a speech file (audio/video), press the button
+                  <p className={rstyles.bodyTextEnglish}>
+                    To upload a speech file (audio/video), press the button
                   </p>
 
                   <p className={rstyles.bodyTextEnglish}>
-                   Text
-                  Unloaded, it appears here
+                    Text Unloaded, it appears here
                   </p>
-                  </div>
+                </div>
               )}
             </div>
           </div>
@@ -92,19 +86,15 @@ export default function UploadFile(props: MyComponentProps) {
         </div>
       </>
     );
-    // break;
   } else if (props.state === "simpleResult" || props.state === "timedResult") {
     return (
       <>
         <div className={styles.speechCard}>
           <div className={styles.cardHead}>
             <div className={styles.cardHeadItems}>
-              {/* <div className={styles.cardHeadItemOne}> */}
-
               <div className={styles.cardHeadItem}>
                 <button className="buttonStyle">
                   <Link to="/convert-speech/record" className="linkStyle">
-                    {/* <img src={micIconWhite} alt="micIcon" /> */}
                     <img src={micIcon} alt="micIcon" />
                     <p>ضبط صدا</p>
                   </Link>

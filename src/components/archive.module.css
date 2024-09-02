@@ -1,426 +1,280 @@
-.archive{
-    direction: rtl;
-    
-    
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-   /* margin-right: 2rem;\ */
+.archive {
+  direction: rtl;
+
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.archiveHead{
-    width: 80%;
+.archiveHead {
+  width: 80%;
 
-    /* آرشیو من */
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 41px;
+  text-align: right;
 
-
-font-family: 'IRANYekan';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 41px;
-text-align: right;
-
-/* Primary Color */
-color: #00BA9F;
-
-
+  color: #00ba9f;
 }
 
-.archiveFiles{
-    width: 80%;
+.archiveFiles {
+  width: 80%;
 }
 
-.fileItems{
-    display: flex;
-    /* gap: 1rem; */
+.fileItems {
+  display: flex;
 }
 
-.fileItemsTitle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.fileItemsTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: right;
 
-
-    /* نام فایل */
-
-
-
-font-family: 'IRANYekan';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-text-align: right;
-
-color: #000000;
-
-
-
-
-
+  color: #000000;
 }
 
-.fileItem{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-right: 1rem;
+.fileItem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-right: 1rem;
 }
 
+.fileItemBackground {
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
+  padding-right: 1rem;
 
-.fileItemBackground{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
-    /* background-color: #F2F2F2; */
-
-    padding-right: 1rem;
-
-
-/* 
-box-shadow: 1px 1px 50px rgba(99, 99, 99, 0.05);
-border-radius: 25px; */
-
-
-/* Back */
-
-
-background: #FEFEFE;
-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05);
-border-radius: 10px;
-
-
-
+  background: #fefefe;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
 }
 
-.chainLogo{
-display: flex;
-justify-content: center;
-align-items: center;
-   
-   
-    border-radius: 100%;
+.chainLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  border-radius: 100%;
 
-    /* Back */
+  background: #ff1654;
 
-        /* padding: 0.5rem; */
-
-background: #FF1654;
-
-width: 31.29px;
-height: 30.83px;
-left: 1097px;
-top: 363px;
-
-
+  width: 31.29px;
+  height: 30.83px;
+  left: 1097px;
+  top: 363px;
 }
 
+.micLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.micLogo{
-    display: flex;  
-    justify-content: center;
-    align-items: center;
-       
-       
-        border-radius: 100%;
-    
-    
-        /* Back */
-    
-            /* padding: 0.5rem 0.75rem; */
-    
-    background: #40C6B8;
-    
+  border-radius: 100%;
 
+  background: #40c6b8;
 
-    /* Back */
-
-
-width: 31.29px;
-height: 30.83px;
-left: 1097px;
-top: 363px;
-
-
-
-
-    }
-
-    
-.uploadLogo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-           
-           
-            border-radius: 100%;
-        
-        
-            /* Back */
-        
-                /* padding: 0.5rem; */
-        
-        background: #118AD3;
-
-        width: 31.29px;
-height: 30.83px;
-left: 1097px;
-top: 363px;
-
-        
-        }
-        
-
-
-
-.fileName{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 50%;
-    gap: 1rem;
-
-
-
-    /* https://irsv.upmusics.com/Downloads/Musics/Sirvan%20K ... */
-
-
-font-family: 'IRANYekan';
-font-style: normal;
-font-weight: 300;
-font-size: 16px;
-line-height: 28px;
-/* identical to box height */
-text-align: right;
-
-/* color: #118AD3; */
-
-
-
+  width: 31.29px;
+  height: 30.83px;
+  left: 1097px;
+  top: 363px;
 }
 
-.fileDescription{
-    direction: ltr;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.uploadLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    overflow-x: hidden ;
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  border-radius: 100%;
 
-    width: 100%; /* Ensure the container has a constrained width */
-    color: #000000;
+  background: #118ad3;
 
-    margin-left: 1rem;
-
-
+  width: 31.29px;
+  height: 30.83px;
+  left: 1097px;
+  top: 363px;
 }
 
-.fileDescriptionRight{
-    direction: rtl;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.fileName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    overflow-x: hidden ;
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  width: 50%;
+  gap: 1rem;
 
-    width: 100%; /* Ensure the container has a constrained width */
-    color: #000000;
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
 
-    margin-left: 1rem;
-
+  text-align: right;
 }
 
+.fileDescription {
+  direction: ltr;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
-.fileDescriptionUrl{
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
-    direction: ltr;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+  width: 100%;
+  color: #000000;
 
-    overflow-x: hidden ;
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis if text overflows */
-
-    width: 100%; /* Ensure the container has a constrained width */
-
-color: #118AD3;
-
-margin-left: 1rem;
-
+  margin-left: 1rem;
 }
 
+.fileDescriptionRight {
+  direction: rtl;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
-.fileDate{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
+  width: 100%;
+  color: #000000;
 
-
-
-    /* 1400-08-21 */
-
-
-font-family: 'IRANSansXFaNum' ;
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 1px;
-/* identical to box height */
-text-align: center;
-
-color: #000000;
-opacity: 0.8;
-
-
+  margin-left: 1rem;
 }
 
+.fileDescriptionUrl {
+  direction: ltr;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 
-.fileType{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
+  width: 100%;
 
+  color: #118ad3;
 
-    /* .mp3 */
-
-
-font-family: 'IRANYekan';
-font-style: normal;
-font-weight: 300;
-font-size: 12px;
-line-height: 21px;
-/* identical to box height */
-text-align: center;
-
-color: #000000;
-
-direction: ltr;
-
-
+  margin-left: 1rem;
 }
 
+.fileDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
 
-.fileTime{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
+  font-family: "IRANSansXFaNum";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1px;
 
+  text-align: center;
 
-    /* 4:29 */
-
-
-
-font-family: 'IRANSansXFaNum';
-font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 18px;
-/* identical to box height */
-text-align: center;
-
-color: #000000;
-
-opacity: 0.8;
-
-
-
-
-
+  color: #000000;
+  opacity: 0.8;
 }
 
+.fileType {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
 
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 21px;
 
-.fileActions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
 
-    
+  color: #000000;
 
-    gap: 1.5rem;
-    
-
-
-    
+  direction: ltr;
 }
 
+.fileTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
 
+  font-family: "IRANSansXFaNum";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
 
-.pagination{
-    display: flex;
-    justify-content: center;
+  text-align: center;
 
-    width: 80%;
+  color: #000000;
 
-
-    margin-top: 4rem;
-
-    margin-bottom: 2rem ;
-
-    /* align-items: center; */
-
-    /* direction: rtl; */
-    bottom: 0;
+  opacity: 0.8;
 }
 
-.a{
-    background-color: #000000;
+.fileActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-
-    direction: rtl;
+  gap: 1.5rem;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
 
+  width: 80%;
 
-.resultBody{
-    /* width: 653px; */
-    height: 429px;
-    left: 989px;
-    top: 285px;
+  margin-top: 4rem;
 
+  margin-bottom: 2rem;
+
+  bottom: 0;
 }
 
+.a {
+  background-color: #000000;
 
-
-
-.fileItemSelected{
-    display: flex;
-    flex-direction: column;
-
- 
-
-
-    /* Main Back */
-
-box-sizing: border-box;
-
-background: #FFFFFF;
-/* Primary Color */
-border: 1px solid #00BA9F;
-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05);
-border-radius: 10px;
-
-padding: 2rem;
-
+  direction: rtl;
 }
 
+.resultBody {
+  height: 429px;
+  left: 989px;
+  top: 285px;
+}
 
+.fileItemSelected {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #00ba9f;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  padding: 2rem;
+}

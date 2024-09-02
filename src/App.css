@@ -1,46 +1,41 @@
-.buttonStyle{
-    border: none;          /* Remove default border */
-    background: none;      /* Remove default background */
-    padding: inherit;            /* Remove default padding */
-    margin: none;             /* Remove default margin */
-    font: inherit;         /* Inherit font styles from parent */
-    color: inherit;        /* Inherit text color */
-    outline: none;         /* Remove default outline */
-    cursor: pointer;       /* Ensure the cursor shows a pointer on hover */
-    display: inherit;         /* To allow children to align properly */
-    gap: inherit;
-    align-items: inherit;  /* Inherit alignment from the parent, if needed */
-    justify-content: inherit; /* Inherit justification from the parent */
-    
-    width: 100%;
+.buttonStyle {
+  border: none;
+  background: none;
+  padding: inherit;
+  margin: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  cursor: pointer;
+  display: inherit;
+  gap: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+
+  width: 100%;
 }
 
-
-.pStyle{
-    width: auto;
+.pStyle {
+  width: auto;
 }
 
-
-.ulStyle{
-    list-style-type: none; /* Remove default list item markers */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+.ulStyle {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-
-.aStyle{
-    text-decoration: none;
+.aStyle {
+  text-decoration: none;
 }
 
-
-
-.linkStyle{
-    color: inherit;          /* Inherit text color from parent */
-    font-size: inherit;      /* Inherit font size */
-    font-family: inherit;    /* Inherit font family */
-    text-decoration: none;   /* Remove underline */
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    gap: inherit;
+.linkStyle {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  gap: inherit;
 }

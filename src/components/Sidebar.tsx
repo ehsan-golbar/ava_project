@@ -17,10 +17,6 @@ export default function Sidebar() {
           <p className={styles.sidebarHeadItem}>آوا</p>
         </div>
         <div className={styles.sidebarPages}>
-          {/* <a className="aStyle" href="#"> */}
-
-          {/* <div className={styles.pagesItem}> */}
-
           <div
             className={
               location.pathname.startsWith("/convert-speech")
@@ -40,10 +36,6 @@ export default function Sidebar() {
             </button>
           </div>
 
-          {/* </a> */}
-
-          {/* <a href="#" className="aStyle"> */}
-
           <div
             className={
               location.pathname.startsWith("/archive")
@@ -62,8 +54,6 @@ export default function Sidebar() {
               </Link>
             </button>
           </div>
-
-          {/* </a> */}
         </div>
       </nav>
     </>

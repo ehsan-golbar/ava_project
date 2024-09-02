@@ -2,15 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 1rem; */
+
   border: 1.5px #00ba9f solid;
   width: fit-content;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   border-radius: 20px;
   margin-left: 1rem;
-
-  /* Back */
 
   box-sizing: border-box;
 
@@ -25,8 +23,6 @@
   height: max-content;
   width: 100%;
   gap: 0.5rem;
-
-  /* flex-direction: row; */
 }
 
 .speechBody {
@@ -56,8 +52,6 @@
   justify-content: end;
 }
 
-/* تبدیل گفتار به متن */
-
 .speechTitle {
   height: fit-content;
   font-family: "IRANYekan";
@@ -70,8 +64,6 @@
 }
 
 .speechDetails {
-  /* آوا با استفاده از هزاران ساعت گفتار با صدای افراد مختلف، زبان فارسی را یاد گرفته است و می‌تواند متن صحبت‌ها را بنویسد. */
-
   height: fit-content;
 
   font-family: "IRANYekan";
@@ -94,19 +86,15 @@
 
 .cardHead {
   display: flex;
-  /* width: 100%; */
+
   width: 653px;
   justify-content: start;
-  /* right: 0; */
-  /* gap: 2rem; */
 }
 
 .cardHeadItems {
   display: flex;
   width: 75%;
   justify-content: start;
-  /* right: 0; */
-  /* gap: 2rem; */
 }
 .cardHeadItem {
   color: #969696;
@@ -130,8 +118,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  /* padding-right: 2.5rem;
-    padding-left: 2.5rem; */
+
   border-radius: 10px 10px 0px 0px;
   font-family: "IRANYekan";
   font-style: normal;
@@ -149,8 +136,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  /* padding-right: 2.5rem;
-    padding-left: 2.5rem; */
+
   border-radius: 10px 10px 0px 0px;
   font-family: "IRANYekan";
   font-style: normal;
@@ -168,8 +154,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  /* padding-right: 2.5rem;
-    padding-left: 2.5rem; */
+
   border-radius: 10px 10px 0px 0px;
   font-family: "IRANYekan";
   font-style: normal;
@@ -181,10 +166,6 @@
 }
 
 .cardBodyLink {
-  /* Back Center */
-
-  /* Back Center */
-
   box-sizing: border-box;
 
   width: 653px;
@@ -196,7 +177,6 @@
   border: 1px solid #ff1654;
   box-shadow: 1px 1px 50px rgba(99, 99, 99, 0.05);
   border-radius: 25px;
-  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 
   display: flex;
   justify-content: center;
@@ -204,8 +184,6 @@
 }
 
 .cardBodyUpload {
-  /* Back Center */
-
   box-sizing: border-box;
 
   width: 653px;
@@ -221,12 +199,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 }
 
 .cardBodyRecord {
-  /* Back Center */
-
   box-sizing: border-box;
 
   width: 653px;
@@ -235,11 +210,10 @@
   top: 285px;
 
   background: #ffffff;
-  /* Primary Color */
+
   border: 1px solid #00ba9f;
   box-shadow: 1px 1px 50px rgba(99, 99, 99, 0.05);
   border-radius: 25px 0px 25px 25px;
-  /* transform: matrix(-1, 0, 0, 1, 0, 0); */
 
   display: flex;
   justify-content: center;
@@ -257,8 +231,6 @@
 .footTitle {
   width: fit-content;
 
-  /* زبان گفتار: */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 300;
@@ -272,8 +244,6 @@
 .footItem {
   width: fit-content;
 
-  /* فارسی */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 400;
@@ -281,7 +251,6 @@
   line-height: 24px;
   text-align: center;
 
-  /* Primary Color */
   color: #00ba9f;
 }
 
@@ -325,8 +294,6 @@
 }
 
 .recordLogo {
-  /* Back */
-
   width: 62px;
   height: 62px;
   left: 632px;
@@ -340,8 +307,6 @@
 }
 
 .linkLogo {
-  /* Back */
-
   width: 40px;
   height: 30px;
   left: 517px;
@@ -359,12 +324,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: fit-content;
-    height: 62px;
-    left: 632px;
-    top: 437px; */
-  /* padding-right: 1rem;
-    padding-left: 1rem; */
 
   display: flex;
   justify-content: center;
@@ -373,9 +332,6 @@
   border: 1px solid;
   border-color: #ff1654;
   gap: 1rem;
-  /* background: #00B3A1; */
-
-  /* back */
 
   padding: 0 1rem;
 
@@ -388,9 +344,6 @@
 }
 
 .linkInput {
-  /* example.com/sample.mp3 */
-
-  /* width: fit-content; */
   width: 100%;
   height: 28px;
   left: 557px;
@@ -401,7 +354,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  /* identical to box height */
+
   text-align: center;
   border: none;
   outline: none;
@@ -410,8 +363,6 @@
 }
 
 .recordDescription {
-  /* برای شروع به صحبت، دکمه را فشار دهید متن پیاده شده آن، در اینجا ظاهر شود */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 300;
@@ -436,15 +387,11 @@
   padding-right: 7rem;
 }
 .userTypeItem {
-  /* مهمان */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
   line-height: 26px;
-  /* identical to box height */
 
-  /* Primary Color */
   color: #00ba9f;
 }

@@ -1,16 +1,15 @@
-// src/features/data/dataSlice.ts
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface DataState {
   resultLanguage: string;
 }
 
 const initialState: DataState = {
-  resultLanguage: 'fa',
+  resultLanguage: "fa",
 };
 
 const dataSlice = createSlice({
-  name: 'lang',
+  name: "lang",
   initialState,
   reducers: {
     setResultLanguage: (state, action: PayloadAction<string>) => {

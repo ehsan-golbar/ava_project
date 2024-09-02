@@ -24,82 +24,77 @@ export default function App() {
   return (
     <>
       {/* <FileFetchProvider> */}
-        {/* <DataProvider> */}
-          <div style={{ background: "#FEFEFE" }}>
-            <UserType></UserType>
-            <Sidebar></Sidebar>
+      {/* <DataProvider> */}
+      <div style={{ background: "#FEFEFE" }}>
+        <UserType></UserType>
+        <Sidebar></Sidebar>
 
-            <Routes>
-              {/* <Route path="/" element={<UserType />} /> */}
-              <Route index element={<ConvertSpeech />} />
-              <Route path="/convert-speech/*" element={<ConvertSpeech />}>
-                <Route index element={<RecordSpeech />} />
-                {/* Default child route */}
-                <Route path="record" element={<RecordSpeech />}></Route>
-                <Route index element={<RecordSpeech />}></Route>
-                <Route
-                  path="upload/*"
-                  element={<UploadFile state="upload" />}
-                >
-                  <Route
-                    path="simpleText"
-                    element={<SimpleText source="upload"></SimpleText>}
-                  ></Route>
-                  <Route
-                    index
-                    element={<TimedText source="upload"></TimedText>}
-                  ></Route>
-                  <Route
-                    path="timedText"
-                    element={<TimedText source="upload"></TimedText>}
-                  ></Route>
-                </Route>
-                <Route path="link/*" element={<LinkFile />}>
-                
-                <Route
-                    path="simpleText"
-                    element={<SimpleText source="link"></SimpleText>}
-                  ></Route>
-                  <Route
-                    index
-                    element={<TimedText source="link"></TimedText>}
-                  ></Route>
-                  <Route
-                    path="timedText"
-                    element={<TimedText source="link"></TimedText>}
-                  ></Route>
-                  
-                  </Route>
-                <Route path="*" element={<div>404 Not Found</div>} />
-              </Route>
-              <Route path="/archive/*" element={<Archive />}>
-                <Route
-                  path="simpleResult"
-                  element={<SimpleText source="archive"></SimpleText>}
-                ></Route>
-                <Route
-                  index
-                  element={<SimpleText source="archive"></SimpleText>}
-                ></Route>
-                <Route
-                  path="timedResult"
-                  element={<TimedText source="archive"></TimedText>}
-                ></Route>
-              </Route>
+        <Routes>
+          {/* <Route path="/" element={<UserType />} /> */}
+          <Route index element={<ConvertSpeech />} />
+          <Route path="/convert-speech/*" element={<ConvertSpeech />}>
+            <Route index element={<RecordSpeech />} />
+            {/* Default child route */}
+            <Route path="record" element={<RecordSpeech />}></Route>
+            <Route index element={<RecordSpeech />}></Route>
+            <Route path="upload/*" element={<UploadFile state="upload" />}>
+              <Route
+                path="simpleText"
+                element={<SimpleText source="upload"></SimpleText>}
+              ></Route>
+              <Route
+                index
+                element={<TimedText source="upload"></TimedText>}
+              ></Route>
+              <Route
+                path="timedText"
+                element={<TimedText source="upload"></TimedText>}
+              ></Route>
+            </Route>
+            <Route path="link/*" element={<LinkFile />}>
+              <Route
+                path="simpleText"
+                element={<SimpleText source="link"></SimpleText>}
+              ></Route>
+              <Route
+                index
+                element={<TimedText source="link"></TimedText>}
+              ></Route>
+              <Route
+                path="timedText"
+                element={<TimedText source="link"></TimedText>}
+              ></Route>
+            </Route>
+            <Route path="*" element={<div>404 Not Found</div>} />
+          </Route>
+          <Route path="/archive/*" element={<Archive />}>
+            <Route
+              path="simpleResult"
+              element={<SimpleText source="archive"></SimpleText>}
+            ></Route>
+            <Route
+              index
+              element={<SimpleText source="archive"></SimpleText>}
+            ></Route>
+            <Route
+              path="timedResult"
+              element={<TimedText source="archive"></TimedText>}
+            ></Route>
+          </Route>
 
-              {/* <Route path="/convert-speech/upload/*" element={<UploadFile state={"simpleResult"} />} /> */}
-              {/* <Route path="/convert-speech/upload/*" element={<UploadFile state={"simpleResult"} />} /> */}
+          {/* <Route path="/convert-speech/upload/*" element={<UploadFile state={"simpleResult"} />} /> */}
+          {/* <Route path="/convert-speech/upload/*" element={<UploadFile state={"simpleResult"} />} /> */}
 
-              {/* <Route path="/convert-speech/upload/*" element={<UploadFile state="simpleResult"/>}/> */}
-              {/* Add more routes as needed */}
-            </Routes>
+          {/* <Route path="/convert-speech/upload/*" element={<UploadFile state="simpleResult"/>}/> */}
+          {/* Add more routes as needed */}
+        </Routes>
 
-            {/*       
+        {/*       
       <ConvertSpeech></ConvertSpeech>
       <Archive></Archive> */}
-            {/* <p>salam</p> */}
-          </div>
-        {/* </DataProvider> */}
+        {/* <p>salam</p> */}
+      </div>
+      {/* </DataProvider> */}
       {/* </FileFetchProvider> */}
     </>
   );

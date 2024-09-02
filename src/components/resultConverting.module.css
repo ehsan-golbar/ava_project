@@ -10,13 +10,10 @@
   display: flex;
 
   align-items: center;
-  /* padding: 1rem; */
 
   gap: 1rem;
 
   border-bottom: 0.25px solid rgba(0, 0, 0, 0.25);
-
-  /* padding-bottom: 0.5rem; */
 
   margin: 1rem;
 }
@@ -29,22 +26,16 @@
 
   gap: 1rem;
 
-  /* متن زمان‌بندی شده */
-
   width: 20%;
 }
 
 .simpletextSelected {
-  /* Line 19 */
-
   display: flex;
 
   justify-content: center;
   align-items: center;
 
   gap: 1rem;
-
-  /* متن زمان‌بندی شده */
 
   width: 20%;
 
@@ -64,10 +55,6 @@
 }
 
 .resultHeadItemSelected {
-  /* متن زمان‌بندی شده */
-
-  /* متن ساده */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 1000;
@@ -153,8 +140,6 @@
 }
 
 .refreshItem {
-  /* شروع دوباره */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 400;
@@ -165,39 +150,30 @@
   color: #ffffff;
 }
 
-/* Style the entire scrollbar */
 ::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-  height: 8px; /* Height of the scrollbar */
+  width: 8px;
+  height: 8px;
 }
 
-/* Style the scrollbar track (the background) */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Light gray background */
-  border-radius: 8px; /* Rounded corners */
+  background: #f1f1f1;
+  border-radius: 8px;
 }
 
-/* Style the draggable part of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: #dadada; /* Darker gray color */
-  border-radius: 8px; /* Rounded corners */
+  background: #dadada;
+  border-radius: 8px;
 }
 
-/* Change the color of the scrollbar thumb when hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: #c7c7c7; /* Even darker gray */
+  background: #c7c7c7;
 }
 
-/* Hide the scrollbar arrows */
 ::-webkit-scrollbar-button {
   display: none;
 }
 
 .bodyText {
-  /* .[عشقی اگر] .[می کنی فرد] .تو آدم میره .خوب تو خوب تو دارم .آرزو که [دیگه رو] .خوب [تو] .[قبل] تو میشه [می گفتم] .با [خود] .خوب تو [رو خوب تو] .آرزو [مینه بمونه] که [ام] .خوب [دوم] .[عشقی اگر] .[می کنی فرد] .تو آدم میره .خوب تو خوب تو دارم .آرزو که [دیگه رو] .خوب [تو] .[قبل] تو میشه [می گفتم] .با [خود] .خوب تو [رو خوب تو] .آرزو [مینه بمونه] که [ام] .خوب [دوم] .[عشقی اگر] .[می کنی فرد] .تو آدم میره .خوب تو خوب تو دارم .آرزو که [دیگه رو] .خوب [تو] .[قبل] تو میشه [می گفتم] .با [خود] .خوب تو [رو خوب تو] .آرزو [مینه بمونه] که [ام] .خوب [دوم] */
-
-  /* [با][---][---] [با] و[---][---] [با][---][---][---][---] کجایی تو [خوش] می دیدی من خسته شدم [ما را] [به] این [زودی] چه جوری شد [عشق شدی] به این است[---] [آخرش] سی با فکر [و] چقدر [نزار می خوام] که [چشم تو] [و با رفت][---][---][---][---][---][---][---][---] سخت [آرام] ولی ازت می خوام[---] بر نگردی هر کسی که به [تو] باشه[---] کاشکی تو منو [بردی] [که چشمک][---] با[---][---][---][---][---] [ابو][---] [با] و و و و و [او] */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 300;
@@ -209,8 +185,6 @@
 }
 
 .bodyTextEnglish {
-  /* [---][---] Lili, take another walk out [of] your fake world [---][---] [Please] put all the drugs out of your hand [---][---] [---][---] You'll see that you can breathe without no back [up] [---][---] So much [stuff] you got to [understand] For every step [---][---] in any walkAny town of any thought[I'll] be your guideFor every street of [any] [sceneAny] place you've never [beenI'll] be your guide [---][---][---][---] */
-
   font-family: "IRANYekan";
   font-style: normal;
   font-weight: 300;
@@ -237,7 +211,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  /* identical to box height */
+
   text-align: right;
 }
 
@@ -251,7 +225,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  /* identical to box height */
+
   text-align: right;
 
   background: #f2f2f2;
@@ -269,7 +243,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  /* identical to box height */
+
   text-align: right;
   color: #118ad3;
 
@@ -288,7 +262,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  /* identical to box height */
+
   text-align: right;
   color: #118ad3;
 }
@@ -298,13 +272,12 @@
 
   margin-right: 1rem;
 
-  /* [با] */
   font-family: "IRANSansXFaNum";
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
   line-height: 1px;
-  /* identical to box height */
+
   text-align: center;
 }
 
@@ -316,7 +289,7 @@
   font-weight: 600;
   font-size: 15px;
   line-height: 1px;
-  /* identical to box height */
+
   text-align: center;
 }
 

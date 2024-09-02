@@ -1,5 +1,4 @@
-// src/features/data/dataSlice.ts
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface Segment {
   start: string;
@@ -7,29 +6,20 @@ export interface Segment {
   text: string;
 }
 
-
 export interface FileData {
-    duration: string;
-    id: number;
-    processed: string;
-    segments: Segment[];
-    // length: number;
-    url: string;
-  }
-  
-  
+  duration: string;
+  id: number;
+  processed: string;
+  segments: Segment[];
+  url: string;
+}
 
-
-
-export  interface DataState {
-
+export interface DataState {
   files: FileData[];
 }
 
 const initialState: DataState = {
-
-  files: 
-  [
+  files: [
     {
       id: 2729,
       url: "https://s-v4.tamasha.com/statics/videos_download/cf/7f/jzgWN_cf7ffa2fbdcc04590d3cd449e5b7e2382be65d6c_n_240.mp4",
@@ -3224,19 +3214,23 @@ const initialState: DataState = {
 };
 
 const dataSlice = createSlice({
-  name: 'files',
+  name: "files",
   initialState,
   reducers: {
-
     removeFile: (state, action: PayloadAction<number>) => {
-      state.files = state.files.filter((file) =>{ return file.id !== action.payload} ) ;
+      state.files = state.files.filter((file) => {
+        return file.id !== action.payload;
+      });
     },
   },
 });
 
-export const findFileByUrl = (state: DataState, fileUrl: string): FileData | undefined => {
-    return state.files.find((file) => file.url === fileUrl);  
-  };
+export const findFileByUrl = (
+  state: DataState,
+  fileUrl: string
+): FileData | undefined => {
+  return state.files.find((file) => file.url === fileUrl);
+};
 
-export const {  removeFile } = dataSlice.actions;
+export const { removeFile } = dataSlice.actions;
 export default dataSlice.reducer;

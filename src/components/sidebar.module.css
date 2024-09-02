@@ -1,136 +1,99 @@
+.sidebar {
+  position: fixed;
+  direction: rtl;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #00c69b;
+  height: 100%;
+  width: 18%;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-image: url("../assets/Alefba.png");
+  background-size: auto;
 
-.sidebar{
-    position: fixed;
-    direction: rtl;
-    right: 0;
-    bottom: 0;
-    top: 0 ;
-    background-color: #00C69B;
-    height: 100%;
-    width: 18%;
-    display: flex;
-    flex-direction: column;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-image: url('../assets/Alefba.png');
-    background-size: auto; /* Default size of the image */
-   
-    background-repeat: repeat; /* Repeat the image */
-   
+  background-repeat: repeat;
 }
 
-.sidebarHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-    align-items: center;
-    color: #FFFFFF;
-   
+.sidebarHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+  color: #ffffff;
 }
 
-.sidebarHeadItem{
-    margin: 0.5rem;
-    margin-top: 2rem;
-    /* آوا */
-    color: #FFFFFF;
+.sidebarHeadItem {
+  margin: 0.5rem;
+  margin-top: 2rem;
 
+  color: #ffffff;
 
-width: 24px;
-height: 35px;
+  width: 24px;
+  height: 35px;
 
-
-font-family: 'IRANYekan';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 35px;
-
-
-
-
-
-
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 35px;
 }
 
-.sidebarPages{
-    display: flex ;
-    flex-direction: column;
-    justify-content: start; 
-    align-items: center;
-    /* margin-right: 1rem; */
-    right: 0;
-    margin-top: 7rem;
+.sidebarPages {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  right: 0;
+  margin-top: 7rem;
 }
 
-.pagesItem{
-    margin-top: 1rem;
-/* display: flex;
-justify-content: center;
-align-items: center; */
-display: flex;
-gap: 1rem;
-    /* justify-content: start; */
-align-items: center;
+.pagesItem {
+  margin-top: 1rem;
 
+  display: flex;
+  gap: 1rem;
 
+  align-items: center;
 
-height: 28px;
+  height: 28px;
 
-width: 70%;
+  width: 70%;
 
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
 
-font-family: 'IRANYekan';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 28px;
-/* identical to box height */
-
-
-color: #FFFFFF;
-padding: 1rem;
-
-
-
+  color: #ffffff;
+  padding: 1rem;
 }
 
+.pagesItemSelected {
+  margin-top: 1rem;
 
-.pagesItemSelected{
-    margin-top: 1rem;
-    /* margin-right:1rem ; */
-    /* margin-left:1rem ; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    display: flex;
-    gap: 1rem;
-        
-    align-items: center;
-    
-    
-    
-    height: 28px;
-    width: 70%;
-    
-    font-family: 'IRANYekan';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    /* identical to box height */
-    
-    
-    color: #FFFFFF; 
-    background-color: #02816E;
+  display: flex;
+  gap: 1rem;
 
-    padding: 1rem;
-    border-radius: 10px;
+  align-items: center;
+
+  height: 28px;
+  width: 70%;
+
+  font-family: "IRANYekan";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+
+  color: #ffffff;
+  background-color: #02816e;
+
+  padding: 1rem;
+  border-radius: 10px;
 }
-
-/* Side menu */
-
-
-/* تبدیل گفتار */
-
-
